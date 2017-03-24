@@ -1,0 +1,26 @@
+######################################################################################################################
+											Few Useful MySQL Commands here										
+######################################################################################################################
+
+Commands:
+	Start MySQL Server (Windows)
+		cd C:\Program Files\MySQL\MySQL Server 5.6\bin
+		mysqld --init-file=c:\mysql\mysql-init.txt
+
+	Start Console
+		mysql -u root -p
+ 
+	Prepare Data
+		create database movie_db;
+		use movie_db;
+		
+		CREATE TABLE movies ( movie_id varchar(10), name varchar(255), year int, stars varchar(255));
+		
+		insert into movies values("tt0060196", "The Good, the Bad and the Ugly", 1966, "Clint Eastwood,Eli Wallach");
+		insert into movies values("tt0073486", "One Flew Over the Cuckoo's Nest", 1975, "Jack Nicholson,Louise Fletcher");
+		insert into movies values("tt0068646", "The Godfather", 1972, "Marlon Brando, Al Pacino, James Caan");
+		insert into movies values("tt0110912", "Pulp Fiction", 1994, " John Travolta, Uma Thurman, Samuel L. Jackson");
+		insert into movies values("tt0110413", "Léon: The Professional", 1994, " Jean Reno, Gary Oldman, Natalie Portman");
+
+	Dump DB
+		mysqldump --databases movie_db > movies.sql -u root -p
